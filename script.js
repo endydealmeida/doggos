@@ -1,8 +1,10 @@
 const DOG_URL = "https://dog.ceo/api/breeds/image/random";
 
-const doggos = document.querySelector(".doggos");
+const doggo = document.querySelector(".doggo");
+let hasdoggo = false;
 
-function addNewDoggo() {
+function generateDoggo() {
+  if (hasdoggo === false) {
   const promise = fetch(DOG_URL);
   promise
     .then(function(response) {
@@ -13,8 +15,15 @@ function addNewDoggo() {
       const img = document.createElement("img");
       img.src = processedResponse.message;
       img.alt = "Cute doggo";
-      doggos.appendChild(img);
+      doggo.appendChild(img);
     });
+  hasdoggo = true;
+  } else {
+    const img = document.querySelector("img");
+    img.remove();
+    hasdoggo = false;
+    generateDoggo();
+  }
 }
 
-document.querySelector(".add-doggo").addEventListener("click", addNewDoggo);
+document.querySelector(".generate-doggo").addEventListener("click", generateDoggo);
