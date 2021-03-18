@@ -34,6 +34,7 @@ promise
   })
 
 const img = document.createElement("img");
+img.className = "img";
 function generateDoggo() {
   const doggo = document.querySelector(".div-doggo");
   img.src = "./loading.gif";
