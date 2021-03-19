@@ -2,8 +2,7 @@ const breeds_url = "https://dog.ceo/api/breeds/list/all";
 const promise = fetch(breeds_url);
 promise
   .then(function (response) {
-    const processingPromise = response.json();
-    return processingPromise;
+    return response.json();
   })
   .then(function (processedResponse) {
     const breeds_list = processedResponse.message;
@@ -46,8 +45,7 @@ function generateDoggo() {
     const promise = fetch(dog_url);
     promise
       .then(function (response) {
-        const processingPromise = response.json();
-        return processingPromise;
+        return response.json();
       })
       .then(function (processedResponse) {
         img.src = processedResponse.message;
@@ -58,8 +56,7 @@ function generateDoggo() {
     const promise = fetch(dog_url);
     promise
       .then(function (response) {
-        const processingPromise = response.json();
-        return processingPromise;
+        return response.json();
       })
       .then(function (processedResponse) {
         img.src = processedResponse.message;
