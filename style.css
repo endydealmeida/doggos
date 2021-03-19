@@ -4,10 +4,12 @@
 
 body {
     padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 15px;
 }
 
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
+.h1-title {
     font-weight: bold;
     font-size: 30px;
 }
@@ -15,30 +17,19 @@ h1 {
 .section-generator {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 15px;
-    text-align: left;
+    width: 500px;
 }
 
-.breeds-select {
-    width: 60%;
-    margin-left: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 15px;
+.select-breeds {
+    width: 50%;
 }
 
 .button-generate {
-    width: 60%;
+    width: 50%;
     height: 40px;
     margin-top: 5px;
     padding: 5px;
     background-color: #ebebeb;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 15px;
     border-radius: 4px;
     cursor: pointer;
 }

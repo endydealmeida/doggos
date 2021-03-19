@@ -8,7 +8,7 @@ promise
     const breeds_list = processedResponse.message;
     const div_select = document.querySelector(".div-select");
     const breeds_select = document.createElement("select");
-    breeds_select.className = "breeds-select";
+    breeds_select.className = "select-breeds";
     div_select.appendChild(breeds_select);
     const option = document.createElement("option");
     option.textContent = "random";
@@ -39,7 +39,7 @@ function generateDoggo() {
   img.src = "./loading.gif";
   img.alt = "Loading";
   doggo.appendChild(img);
-  const breeds_select = document.querySelector(".breeds-select");
+  const breeds_select = document.querySelector(".select-breeds");
   if (breeds_select.value === "random") {
     const dog_url = "https://dog.ceo/api/breeds/image/random";
     const promise = fetch(dog_url);
